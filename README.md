@@ -1,13 +1,9 @@
 # Text-Based Game
 
 This is a simple text-based game where the player controls a character within a grid-based world. The goal is to navigate the character to reach a specific destination while avoiding obstacles.
+This project will use me to perform f++ and git basics.
 
 ## Getting Started
-
-### Prerequisites
-
-- C++ compiler (e.g., g++)
-- Git
 
 ### Gameplay
 
