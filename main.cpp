@@ -12,7 +12,7 @@ int main()
     initMapSize(mapSize);
 
     // Create a 2D map using std::vector
-    vector<vector<int>> map(mapSize, vector<int>(mapSize));
+    vector<vector<char>> map(mapSize, vector<char>(mapSize));
     initMap(map);
 
     return 0;

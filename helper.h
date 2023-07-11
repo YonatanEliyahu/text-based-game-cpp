@@ -6,4 +6,4 @@
 using namespace std;
 
 void initMapSize(int &mapSize);
-void initMap(vector<vector<int>> &map);
+void initMap(vector<vector<char>> &map);

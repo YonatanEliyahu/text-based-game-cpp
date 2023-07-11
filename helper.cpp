@@ -14,9 +14,10 @@ void initMapSize(int &mapSize){
     } while (mapSize == 0);
 }
 
-void initMap(vector<vector<int>> &map){
+void initMap(vector<vector<char>> &map){
     for(int i=0;i<map.size();i++){
         for(int j=0;j<map.size();j++)
-        map[i][j]=0;
+        map[i][j]=" ";
     }
+    map[0][0]='i';
 }
