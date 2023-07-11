@@ -3,6 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <random>
 using namespace std;
 
 void initMapSize(int &mapSize);

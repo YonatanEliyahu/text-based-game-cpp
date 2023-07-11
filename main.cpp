@@ -8,6 +8,8 @@
 using namespace std;
 int main()
 {
+
+
     int mapSize;
     initMapSize(mapSize);
 

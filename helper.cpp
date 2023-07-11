@@ -15,9 +15,26 @@ void initMapSize(int &mapSize){
 }
 
 void initMap(vector<vector<char>> &map){
-    for(int i=0;i<map.size();i++){
-        for(int j=0;j<map.size();j++)
-        map[i][j]=" ";
+    int mapSize=map.size();
+    //setting the map to an empty
+    for(int i=0;i<mapSize;i++){
+        for(int j=0;j<mapSize;j++)
+        map[i][j]=' ';
     }
     map[0][0]='i';
+
+    random_device rd; // Obtain a random seed from the hardware
+    mt19937 gen(rd()); // Standard mersenne_twister_engine seeded with rd()
+
+    uniform_int_distribution<> dis(0, mapSize-1); //setting generator of random integers
+
+    for(int i=1;i<mapSize;i++){ // for every line
+        int monsterPos = dis(gen);
+        int blockPos;
+        do{
+            blockPos = dis(gen);
+        }while(blockPos == monsterPos || blockPos+1==monsterPos);
+    }
+
+
 }
