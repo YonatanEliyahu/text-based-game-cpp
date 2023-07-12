@@ -33,14 +33,21 @@ void initMap(vector<vector<char>> &map)
 
     for (int i = 1; i < mapSize; i++)
     { // for every line - generate random location in the map for walls and monsters
-        int monsterPos = dis(gen);
-        int wallPos;
+        int wallPos = dis(gen);
+        for (int j = -(mapSize/ 7); j <= (mapSize / 7); j++)
+        {
+            if (wallPos+j >=0 && wallPos+j <mapSize)
+                map[i][wallPos+j] = '#';
+        }
         do
         {
-            wallPos = dis(gen);
-        } while (wallPos == monsterPos || wallPos + 1 == monsterPos || wallPos >= mapSize - 1);
-        map[i][monsterPos] = '@';                    // placing monster in the map
-        map[i][wallPos] = map[i][wallPos + 1] = '#'; // placing walls in the map
+            int monsterPos = dis(gen);
+            if (map[i][monsterPos] == ' ')
+            {
+                map[i][monsterPos] = '@';
+                break;
+            }
+        } while (true);
     }
     map[mapSize - 1][mapSize - 1] = '$'; // locate prize
 }
