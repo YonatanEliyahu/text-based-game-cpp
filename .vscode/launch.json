@@ -9,7 +9,7 @@
       "stopAtEntry": false,
       "externalConsole": false,
       "cwd": "/home/yonatan/Desktop/cppGame",
-      "program": "/home/yonatan/Desktop/cppGame/game",
+      "program": "/home/yonatan/Desktop/cppGame/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
