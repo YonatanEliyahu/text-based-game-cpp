@@ -17,6 +17,7 @@ int main()
     vector<vector<char>> map(mapSize, vector<char>(mapSize));
     initMap(map);
     bool gameOn = true;
+    cout << "move over the map using wasd \navoid monsters (@) and move arong walls (#) to get your prize ($)"<<endl<<endl<<endl;
     displayMap(map);
     while (gameOn)
     {
