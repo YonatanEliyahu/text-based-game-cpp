@@ -16,6 +16,7 @@ This project will use me to perform c++ and git basics.
 You can customize the game by modifying the source code. Some possible enhancements include:
 
     Adding more levels with different grid configurations.
-    Introducing additional features such as power-ups or enemies.
-    Implementing a scoring system or time limit.
+    Introducing additional features to the enemie monsters.
+    Set the walls and monster deployment in unfixed size.
+    
 
