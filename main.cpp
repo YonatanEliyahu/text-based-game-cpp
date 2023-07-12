@@ -32,7 +32,7 @@ int main()
         std::chrono::duration<double> elapsedSeconds = currentTime - startTime;
         if (elapsedSeconds.count() >= timeLimitSeconds)
         {
-            std::cout << "Time's up!" << std::endl;
+            cout << "Time's up!" << std::endl;
             break; // Exit the game loop
         }
         std::cout << "time left " << (int)elapsedSeconds.count() << '/' << timeLimitSeconds << endl;
