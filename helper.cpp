@@ -31,7 +31,7 @@ void initMap(vector<vector<char>> &map)
 
     uniform_int_distribution<> dis(0, mapSize - 1); // setting generator of random integers
 
-    for (int i = 1; i < mapSize; i++)
+    for (int i = 1; i < mapSize-1; i++)
     { // for every line - generate random location in the map for walls and monsters
         int wallPos = dis(gen);
         for (int j = -(mapSize/ 7); j <= (mapSize / 7); j++)
