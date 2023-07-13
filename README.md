@@ -6,12 +6,12 @@ This project will use me to practice **C++**, **git** and **docker** basics.
 ## Getting Started
 
 ### Run instruction
-    You can run the program by: (g++ required)
+    You can run the program by:
     1. clone the repo from git and run: 
             g++ -o game main.cpp helper.cpp player.cpp
             ./game
     
-    2. run using docker 
+    2. run using docker: 
         docker run -it yonatanecs/cpp-game
 
 
