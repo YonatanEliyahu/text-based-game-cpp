@@ -17,6 +17,5 @@ You can customize the game by modifying the source code. Some possible enhanceme
 
     Adding more levels with different grid configurations.
     Introducing additional features to the enemie monsters.
-    Set the walls and monster deployment in unfixed size.
     
 
