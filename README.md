@@ -11,7 +11,7 @@ This project will use me to practice **C++**, **git** and **docker** basics.
             g++ -o game main.cpp helper.cpp player.cpp
             ./game
     
-    2. run using **docker** 
+    2. run using docker 
         docker run -it yonatanecs/cpp-game
 
 
