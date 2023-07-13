@@ -1,7 +1,7 @@
 # Text-Based Game
 
 This is a simple text-based game where the player controls a character within a grid-based world. The goal is to navigate the character to reach a specific destination while avoiding obstacles.
-This project will use me to practice C++, git and docker basics.
+This project will use me to practice **C++**, **git** and **docker** basics.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ This project will use me to practice C++, git and docker basics.
             g++ -o game main.cpp helper.cpp player.cpp
             ./game
     
-    2. run using docker 
+    2. run using **docker** 
         docker run -it yonatanecs/cpp-game
 
 
