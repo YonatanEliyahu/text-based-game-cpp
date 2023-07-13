@@ -38,9 +38,9 @@ int main()
         std::cout << "time left " << (int)elapsedSeconds.count() << '/' << timeLimitSeconds << endl;
         gameOn = takeTurn(p, map);
         system(CLEAR_SCREEN); // clearing output // CLEAR_SCREEN defined in helper.h // cls for win os and clear for unix based os
-        if (gameOn)
-            displayMap(map);
-        else // player dies
+        displayMap(map);
+        
+        if (!gameOn) // player dies
         {
             cout << "GAME OVER!" << endl;
             break; // Exit the game loop
