@@ -31,13 +31,13 @@ void initMap(vector<vector<char>> &map)
 
     uniform_int_distribution<> dis(0, mapSize - 1); // setting generator of random integers
 
-    for (int i = 1; i < mapSize-1; i++)
+    for (int i = 1; i < mapSize - 1; i++)
     { // for every line - generate random location in the map for walls and monsters
         int wallPos = dis(gen);
-        for (int j = -(mapSize/ 7); j <= (mapSize / 7); j++)
+        for (int j = -(mapSize / 7); j <= (mapSize / 7); j++)
         {
-            if (wallPos+j >=0 && wallPos+j <mapSize)
-                map[i][wallPos+j] = '#';
+            if (wallPos + j >= 0 && wallPos + j < mapSize)
+                map[i][wallPos + j] = '#';
         }
         do
         {
@@ -51,7 +51,7 @@ void initMap(vector<vector<char>> &map)
     }
     map[mapSize - 1][mapSize - 1] = '$'; // locate prize
 }
-void displayMap(vector<vector<char>> &map)
+void displayMap(const vector<vector<char>> &map)
 {
     for (int i = 0; i < map.size(); i++)
     {
@@ -65,12 +65,19 @@ void displayMap(vector<vector<char>> &map)
 bool takeTurn(Player &p, vector<vector<char>> &map)
 {
     char dir;
+    bool refresh = false;
     do
     {
+        if (refresh) // takes place from second time and on
+        {
+            displayMap(map);
+            system(CLEAR_SCREEN); // clearing output // CLEAR_SCREEN defined in helper.h // cls for win os and clear for unix based os
+        }
         cout << "make a move using ASDW" << endl
              << "hp left: " << p.getHP() << endl;
-        cin >> dir;
-        cin.ignore(10000, '\n');
-    } while (dir != 'a' && dir != 's' && dir != 'd' && dir != 'w');
+        cin >> dir;              // read direction
+        cin.ignore(10000, '\n'); // clear input stream
+        refresh = true;
+    } while (dir != 'a' && dir != 's' && dir != 'd' && dir != 'w'); // while input is invalid
     return p.move(dir, map);
 }
